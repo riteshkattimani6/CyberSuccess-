@@ -1,28 +1,55 @@
-package STREAMapi;
+package PracticeQuestion;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-public class Product implements Comparable<Product> {
-	int id;
+public class Product {
+	int pid;
 	String name;
-	double price;
-
-	@Override
-	public int compareTo(Product o) {
-//		Double price1 = this.getPrice();
-//		Double price2 = o.getPrice();
-		
-		Integer id1 = this.getId();
-		Integer id2 = o.getId();
-		
-		return id1.compareTo(id2);
+	String category;
+	double Price;
+	int qty;
+	public Product() {
+		super();
 	}
+	public Product(int pid, String name, String category, double price, int qty) {
+		super();
+		this.pid = pid;
+		this.name = name;
+		this.category = category;
+		this.Price = price;
+		this.qty = qty;
+	}
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public double getPrice() {
+		return Price;
+	}
+	public void setPrice(double price) {
+		Price = price;
+	}
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	@Override
+	public String toString() {
+		return pid + " " + name + " " + category + " " + Price + " " + qty;
+	}
+	
 }
